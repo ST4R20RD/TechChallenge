@@ -17,6 +17,9 @@ app.use(express.json());
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
+const phonesRoutes = require("./routes/phones.routes");
+app.use("/phones", phonesRoutes);
+
 app.get('/', (req, res) => {
   res.send('hello world!')
 })
