@@ -4,29 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Landing, Home, NotFound } from "pages";
-import { PrivateRoute } from "components";
-import { AuthContextProvider } from "context";
+import { Home, NotFound, PhoneDetails } from "pages";
+import { PhoneContextProvider } from "context";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthContextProvider>
+      <PhoneContextProvider>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route
-              index
-              element={
-                <PrivateRoute>
-                  <Home />
-                </PrivateRoute>
-              }
-            />
-            <Route path="landing" element={<Landing />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+          <Route path="/" element={<App />} />
+          <Route path="/phoneDetails/:phoneId" element={<PhoneDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </AuthContextProvider>
+      </PhoneContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

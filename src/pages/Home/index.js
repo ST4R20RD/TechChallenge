@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "context";
 import styles from "./Home.module.css";
+import { PhoneList } from "components/PhoneList";
+import { Navbar } from "components";
 
 export function Home() {
-  const { user } = useContext(AuthContext);
   return (
     <div>
-      <h1>Home</h1>
-      <code>{JSON.stringify(user)}</code>
+      <PhoneList/>
     </div>
   );
 }

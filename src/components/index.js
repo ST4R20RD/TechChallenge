@@ -1,5 +1,5 @@
 export { Navbar } from "./Navbar";
-export { Signup } from "./Signup";
-export { Login } from "./Login";
-export { PrivateRoute } from "./PrivateRoute";
-export {FileUpload} from './FileUpload';
+export { PhoneList } from "./PhoneList";
+export { Spinner } from "./Spinner";
+export { Footer } from "./Footer";
+
